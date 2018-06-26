@@ -58,7 +58,13 @@ class Song
   end
   
   def Song.create_from_filename(filename)
-    
+    song =Song.new
+    data = filename.split(" - ")
+    song.artist_name = data[0]
+    name_mp = data[1].split(".")
+    song.name = name_mp[0]
+    @@all << song
+    song
   end
   
   def Song.destroy_all
