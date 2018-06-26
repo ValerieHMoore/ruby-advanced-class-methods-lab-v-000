@@ -53,10 +53,9 @@ class Song
     song.artist_name = data[0]
     name_mp = data[1].split(".")
     song.name = name_mp[0]
+    @@all << song
+    song
   end
-  
-    # @@all << song
-    # song
     
   def Song.destroy_all
     self.all.clear
