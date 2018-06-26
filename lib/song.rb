@@ -53,7 +53,6 @@ class Song
     name_mp = data[1].split(".")
     name = name_mp[0]
     song = self.create_by_name(name)
-    
   end
   
   def Song.destroy_all
